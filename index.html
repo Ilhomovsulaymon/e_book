@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Mobile_Book — sevimli elektron kitoblaringizni toping va mutolaa qiling.">
+  <title>Mobile_Book — Kitoblar olami</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">📚 Mutolaa — eng yaxshi sarmoya. Yangi kitoblar har hafta qo‘shiladi.</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Mobile Book bosh sahifa">
+      <span class="brand-mark">M</span><span>Mobile<span class="brand-light">_Book</span></span>
+    </a>
+    <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Menyuni ochish">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a class="nav-link active" href="#home">Bosh sahifa</a>
+      <a class="nav-link" href="#books">Kitoblar</a>
+      <a class="nav-link" href="#categories">Kategoriyalar</a>
+      <a class="nav-link" href="#about">Biz haqimizda</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="favoritesOpen" aria-label="Sevimlilar">♡<span class="count-badge" id="favoriteCount">0</span></button>
+      <button class="profile-btn" id="profileOpen"><span class="profile-avatar">👤</span><span>Profil</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> KITOBSEVARLAR UCHUN MAXSUS MAKON</div>
+        <h1>Har bir kitob —<br><span>yangi bir olam.</span></h1>
+        <p>O‘zingiz izlagan bilim, ilhom va sarguzashtlarni bir joydan toping. Mutolaani bugun boshlang.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#books">Kitoblarni ko‘rish <span>↗</span></a>
+          <a class="text-btn" href="#categories">Kategoriyalarni tanlash</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="statBooks">06</strong><span>Tanlangan kitob</span></div>
+          <i></i><div><strong>05</strong><span>Janr</span></div><i></i><div><strong>24/7</strong><span>Mutolaa vaqti</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Kitoblar tasviri">
+        <div class="art-glow"></div>
+        <div class="floating-note note-top">✦ Bilim sari</div>
+        <div class="book-stack">
+          <div class="cover cover-one"><small>JAMES CLEAR</small><b>ATOMIC<br>HABITS</b><span>Yaxshi odatlar kuchi</span></div>
+          <div class="cover cover-two"><small>O‘TKIR HOSHIMOV</small><b>DUNYONING<br>ISHLARI</b><span>Qissa</span></div>
+          <div class="cover cover-three"><small>ADABIYOT</small><b>YANGI<br>OLAMLAR</b><span>Mutolaa to‘plami</span></div>
+        </div>
+        <div class="floating-note note-bottom">✧ O‘qi. O‘rgan. Rivojlan.</div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="benefit"><span class="benefit-icon">⌕</span><div><b>Oson qidiruv</b><small>Kerakli kitobni tez toping</small></div></div>
+      <div class="benefit"><span class="benefit-icon">♡</span><div><b>Sevimlilar</b><small>Yoqtirganlaringizni saqlang</small></div></div>
+      <div class="benefit"><span class="benefit-icon">◷</span><div><b>Istalgan vaqtda</b><small>Mutolaa doim siz bilan</small></div></div>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="section-heading"><div><div class="eyebrow">O‘ZINGIZGA MOSINI TANLANG</div><h2>Kitob <span>kategoriyalari</span></h2></div><p>Kayfiyatingizga mos yo‘nalishni tanlang.</p></div>
+      <div class="category-grid" id="categoryGrid">
+        <button class="category-card selected" data-category="Barchasi"><span>✦</span><b>Barchasi</b><small>Barcha kitoblar</small></button>
+        <button class="category-card" data-category="Roman"><span>♡</span><b>Roman</b><small>Hayotiy hikoyalar</small></button>
+        <button class="category-card" data-category="Fantastika"><span>✧</span><b>Fantastika</b><small>Cheksiz tasavvur</small></button>
+        <button class="category-card" data-category="Tarix"><span>⌛</span><b>Tarix</b><small>O‘tmishga sayohat</small></button>
+        <button class="category-card" data-category="Detektiv"><span>⌕</span><b>Detektiv</b><small>Sirli voqealar</small></button>
+        <button class="category-card" data-category="Ilmiy"><span>⚛</span><b>Ilmiy</b><small>Bilim va tafakkur</small></button>
+      </div>
+    </section>
+
+    <section class="section books-section" id="books">
+      <div class="section-heading books-heading"><div><div class="eyebrow">SIZ UCHUN SARALANDI</div><h2>Ommabop <span>kitoblar</span></h2></div><span class="result-count" id="resultCount">6 ta kitob</span></div>
+      <div class="toolbar">
+        <label class="search-field"><span>⌕</span><input id="searchInput" type="search" placeholder="Kitob yoki muallif nomini qidiring..." autocomplete="off"><kbd>⌘ K</kbd></label>
+        <select id="sortSelect" aria-label="Saralash"><option value="default">Tavsiya etilgan</option><option value="az">Nom: A dan Z gacha</option><option value="za">Nom: Z dan A gacha</option></select>
+      </div>
+      <div class="book-grid" id="bookGrid"></div>
+      <div class="empty-state hidden" id="emptyState"><span>⌕</span><h3>Kitob topilmadi</h3><p>Boshqa nom yoki kategoriyani sinab ko‘ring.</p><button class="secondary-btn" id="resetFilters">Filtrlarni tozalash</button></div>
+    </section>
+
+    <section class="quote-banner">
+      <span class="quote-mark">“</span><p>Kitob — insoniyat tafakkurining eng sokin, ammo eng qudratli ovozi.</p><small>— Mobile_Book</small>
+    </section>
+
+    <section class="about-section" id="about">
+      <div><div class="eyebrow">BIZNING MAQSADIMIZ</div><h2>Mutolaani <span>hamma uchun</span> qulay qilamiz.</h2></div>
+      <p>Mobile_Book — kitobsevarlar uchun yaratilgan elektron kutubxona. Bu yerda sevimli asarlaringizni topishingiz, saqlashingiz va mutolaa qilishingiz mumkin.</p>
+      <a href="#books" class="primary-btn">Mutolaaga boshlash <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">M</span><span>Mobile<span class="brand-light">_Book</span></span></a><p>Sevimli kitoblaringiz — bir joyda.</p><div class="footer-bottom"><span>© 2026 Mobile_Book. Barcha huquqlar himoyalangan.</span><span>Bilim bilan yuksaling ✦</span></div></footer>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Yopish">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="main.js"></script>
+</body>
+</html>
